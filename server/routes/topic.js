@@ -3,7 +3,7 @@ const axios = require('axios');
 const router = express.Router();
 
 // POST /api/topic
-// Expects { title: string } in request body
+
 router.post('/', async (req, res) => {
   const { title } = req.body;
   try {

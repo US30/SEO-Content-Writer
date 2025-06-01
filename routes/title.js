@@ -3,7 +3,7 @@ const axios = require('axios');
 const router = express.Router();
 
 // POST /api/title
-// Expects { keyword: string } in request body
+
 router.post('/', async (req, res) => {
   const { keyword } = req.body;
   try {

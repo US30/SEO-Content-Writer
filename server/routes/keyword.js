@@ -3,7 +3,7 @@ const axios = require('axios');
 const router = express.Router();
 
 // POST /api/keyword
-// Expects { keyword: string } in request body
+
 router.post('/', async (req, res) => {
   console.log('Received keyword request with body:', req.body);
   const { keyword } = req.body;
@@ -35,8 +35,7 @@ router.post('/', async (req, res) => {
   } catch (err) {
     console.error('Error in keyword generation:', err.message);
     if (err.response) {
-      // The request was made and the server responded with a status code
-      // that falls out of the range of 2xx
+      
       console.error('Error response data:', err.response.data);
       console.error('Error response status:', err.response.status);
       console.error('Error response headers:', err.response.headers);
